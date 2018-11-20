@@ -4,9 +4,30 @@ How to use the Add Pay API using NodeJS.
 
 To use this you need an AddPay account.
 
-Create token using the `create_token.js` script.
+## Create a token
 
-Use the `add-pay.js` module to call the API to create a transaction & customer. 
+To use this module you will need a TOKEN that is generated from your AddPay Client Id and Client Secret. To create a token do this.
+
+Export your AddPay Client Id and Client Secret as an environment variable.
+
+```
+export CLIENT_ID=<YOUR CLIENT ID HERE>
+export CLIENT_SECRET=<YOUR CLIENT SECRET HERE>
+```
+
+Create the token using the `create_token.js` script.
+
+The generated token will be displayed on the screen. Export the generated token as a environment variable called `TOKEN`
+
+```
+export TOKEN=<your token here>
+```
+
+## Use the module
+
+Use the `add-pay.js` module to call the API to create a transaction & customer.
+
+> Note to use the module you will need the **TOKEN** environment variable. 
 
 For the resulting Payment URL returned by `addTransaction` to work a customer needs to be linked to the transaction.
 
