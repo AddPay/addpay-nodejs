@@ -1,8 +1,6 @@
-# Add Pay API example
+# AddPay API example
 
-How to use the Add Pay API using NodeJS.
-
-To use this you need an AddPay account.
+How to use the AddPay API using NodeJS. To use this you need an AddPay account.
 
 ## Create a token
 
