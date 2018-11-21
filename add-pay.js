@@ -23,18 +23,18 @@ module.exports = function (params) {
             .post(CREATE_TRANSACTION_URL, transactionData, config);
     }
 
-    function createCustomer(customerData) {
+    async function createCustomer(customerData) {
         const CREATE_CUSTOMER_URL = BASE_URL + "/customers/";
         return axios
             .post(CREATE_CUSTOMER_URL, customerData, config);
     }
 
-    function associateTransactionWithCustomer(transationId, customerId) {
+    async function associateTransactionWithCustomer(transationId, customerId) {
         const associateURL = BASE_URL + `/transactions/${transationId}/customers/${customerId}`;
         return axios.put(associateURL, {}, config)
     }
 
-    function getCustomers () {
+    async function getCustomers () {
 
     }
 

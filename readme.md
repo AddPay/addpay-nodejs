@@ -45,7 +45,8 @@ function createTransaction() {
         }
     };
     
-    await addPay.createTransaction(transactionData)
+    let response = await addPay.createTransaction(transactionData);
+    console.log(response);
 }
 
 createTransaction();
