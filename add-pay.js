@@ -11,16 +11,22 @@ module.exports = function (params) {
 
     const BASE_URL =  params.base_url || 'https://secure-test.addpay.co.za/v2';
 
-    async function getTransactions() {
+    async function getTransactionTypes() {
         const URL = BASE_URL + '/services?type=transaction';
-        axios.get(URL, config)
+        return await axios.get(URL, config)
     }
 
 
     async function createTransaction(transactionData) {
         const CREATE_TRANSACTION_URL = BASE_URL + "/transactions/";
-        return axios
+        return await axios
             .post(CREATE_TRANSACTION_URL, transactionData, config);
+    }
+
+    async function getTransaction(transactionId) {
+        const FIND_TRANSACTION_URL = BASE_URL + `/transactions/${transactionId}`;
+        return await axios
+            .post(FIND_TRANSACTION_URL, transactionData, config);
     }
 
     async function createCustomer(customerData) {
@@ -39,7 +45,8 @@ module.exports = function (params) {
     }
 
     return {
-        getTransactions,
+        getTransaction,
+        getTransactionTypes,
         createTransaction,
         createCustomer,
         getCustomers,
