@@ -17,8 +17,18 @@ Create the token using the `create_token.js` script.
 
 The generated token will be displayed on the screen. Export the generated token as a environment variable called `TOKEN`
 
+## Create a TOKEN environment variable
+
+Create a TOKEN environment variable using the `export` command like this:
+
 ```
-export TOKEN=<your token here>
+export TOKEN='<your token here>'
+```
+
+You can see the token value by using `echo`:
+
+```
+echo $TOKEN
 ```
 
 ## Use the module
