@@ -5,7 +5,7 @@ module.exports = function (params) {
     const config = {
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Token :'+params.token
+            'Authorization': 'Token :' + params.token
         }
     };
 
